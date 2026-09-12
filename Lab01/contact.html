@@ -6,30 +6,59 @@
 </head>
 
 <body>
-
 <!-- Site navigation menu -->
 <ul class="navbar">
-  <li><a href="index.html">Home page</a>
-  <li><a href="musings.html">Musings</a>
-  <li><a href="town.html">My town</a>
-  <li><a href="links.html">Links</a>
+  <li><a href="index.html">Inicio</a>
+  <li><a href="author.html">Sobre mi</a>
+  <li><a href="system.html">¿Por qué Sistemas?</a>
+  <li><a href="w3c.html">Sobre W3C</a>
+  <li><a href="contact.html">Contáctame</a>
 </ul>
 
-<!-- Main content -->
-<h1>My first styled page</h1>
+<article id="formulario" aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario">Contáctame</h2>
+      <p>
+        Completa el siguiente formulario para ponerte en contacto conmigo. Este formulario tiene
+        únicamente fines demostrativos como parte del curso y no envía información real.
+      </p>
+ 
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Datos de contacto</legend>
+ 
+          <div>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+          </div>
+ 
+          <div>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+          </div>
+ 
+          <div>
+            <label for="asunto">Asunto:</label>
+            <select id="asunto" name="asunto">
+              <option value="consulta">Consulta académica</option>
+              <option value="proyecto">Colaboración en proyecto</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+ 
+          <div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+          </div>
+ 
+          <button type="submit">Enviar mensaje</button>
+        </fieldset>
+      </form>
+    </article>
 
-<p>Welcome to my styled page!
-
-<p>It lacks images, but at least it has style.
-And it has links, even if they don't go
-anywhere&hellip;
-
-<p>There should be more here, but I don't know
-what yet.
-
-<!-- Sign and date the page, it's only polite! -->
-<address>Made 5 April 2004<br>
-  by myself.</address>
+<footer class="sitio">
+    <p>Contacto: <a href="mailto:fmamanip@unsa.edu.pe">fmamanip@unsa.edu.pe</a></p>
+    <p>&copy; 2026 Francisco Mamani. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
