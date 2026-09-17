@@ -1,28 +1,76 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html lang="es">
 <html>
 <head>
-  <title>My first styled page</title>
+  <meta charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <main>
+      <form action = "/procesar" method="POST" class = "form_container">
+        <fieldset>
+          <legend> Información Personal</legend>
+          <div class = "form-group">
+            <label for="codigo" class="form-label">Código de Estudiante:</label>
+            <input type="text" id="codigo" name="codigo" class="form-input" 
+            required pattern="[0-9]{8}" placeholder="Ej: 20261155" title="Ingresar exactamente 8 digitos numericos">
+          </div>
+          <div class = "form-group">
+            <label for="nombres" class="form-label">Nombres y Apellidos:</label>
+            <input type="text" id="nombres" name="nombres" class="form-input"
+            required pattern="[A-Za-z\s]+" placeholder="Ej: Rodrigo Boecio" title="Ingresar solo letras y espacios">
+          </div>
+          <div class = "form-group">
+            <label for="fecha-nacimiento" class="form-label">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" class="form-input" min="1950-01-01" max="2010-12-12"
+            required>
+          </div>
+          <div class = "form-group">
+            <label for="carrera" class="form-label">Carrera Profesional:</label>
+            <select id="carrera" name="carrera" class="form-input" required>
+              <option value="">Seleccionar carrera</option>
+              <option value="ing-software">Ingeniería de Civil</option>
+              <option value="ing-sistemas">Ingeniería de Sistemas</option>
+              <option value="lic-computacion">Ciencias de la computación</option>
+            </select>
+          </div>
+          <div class = "form-group">
+            <label for="turno" class="form-label">Turno:</label>
+            <input type="radio" id="turno-manana" name="turno" value="mañana" required>
+            <label for="turno-manana">Mañana</label>
+            <input type="radio" id="turno-tarde" name="turno" value="tarde" required>
+            <label for="turno-tarde">Tarde</label>
+            <input type="radio" id="turno-noche" name="turno" value="noche" required>
+            <label for="turno-noche">Noche</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend> Información de la Cuenta</legend>
+          <div class="form-group">
+            <label for="email" class="form-label">Correo Institucional:</label>
+            <input type="email" id="email" name="email" class="form-input"
+            required placeholder="alumno@unsa.edu.pe" title="Ingresar un correo electrónico válido">
+          </div>
+          <div class="form-group">
+          <label for="contraseña" class="form-label">Contraseña:</label>
+          <input type="password" id="contraseña" name="contraseña" class="form-input"
+          required minlength="8" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" placeholder="Mínimo 8 caracteres, al menos una letra mayúscula y un número"
+           title="La contraseña debe tener al menos 8 caracteres, incluyendo al menos una letra mayúscula y un número">
+          </div>
+          <div class="form-group">
+            <label for="comentarios" class="form-label">Comentarios:</label> 
+            <textarea id="comentarios" name="comentarios" class="form-input" rows="3"
+            placeholder="Escribe tus comentarios aquí"></textarea>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="checkbox" name="checkbox" required>
+            <label for="checkbox" class="form-label">Acepto los términos y condiciones:</label>
+          </div>
+        </fieldset>
 
-<form action="/procesar" method="POST" class="form-container">
-<fieldset>
-<legend>Datos de Acceso</legend>
-<div class="form-group">
-<label for="email" class="form-label">Correo Institucional:</label>
-<input type="email" id="email" name="email" class="form-input"
-required placeholder="usuario@universidad.edu.pe">
-</div>
-</fieldset>
-</form>
-
-<footer class="sitio">
-    <p>Contacto: <a href="mailto:fmamanip@unsa.edu.pe">fmamanip@unsa.edu.pe</a></p>
-    <p>&copy; 2026 Francisco Mamani. Todos los derechos reservados.</p>
-  </footer>
-
+      </form>
+  </main>
 </body>
-
 </html>
