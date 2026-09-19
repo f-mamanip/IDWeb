@@ -3,6 +3,10 @@ body {
 }
 
 fieldset {
+    font-size: 16px;
+    font-family: Courier, cursive ;
+    margin: auto;
+    width: fit-content;
     padding: 10px 20px;
     box-shadow: 0 0 10px rgba(5, 5, 5, 0.2);
     border: 2px solid #ccc;
@@ -12,6 +16,8 @@ fieldset {
 }
 
 legend {
+    font-size: 18px;
+    font-family: Courier, cursive ;
     display: inline-block;
     width: auto;
     padding: 10px 20px;
@@ -21,10 +27,15 @@ legend {
     margin-right: auto;
 }
 
+
+
 .form-group {
+    font-weight: bold;
     width: 400px;
     margin-left: auto;
     margin-right: auto;
+    font-family: Courier, cursive ;
+    color :#04193e
 }
 
 .form-button:hover{
