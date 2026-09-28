@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-aula sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#inicio"><span>Aula</span> Unsa</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto mb-3 mb-lg-0 ms-lg-4">
+        <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#noticias">Noticias</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="d-flex flex-column flex-lg-row gap-2">
+        <button class="btn btn-outline-paper" type="button">Iniciar sesión</button>
+        <button class="btn btn-gold" type="button">Registrarse</button>
+      </div>
+    </div>
+  </div>
+</nav>
+ 
+<!-- ============ HERO (Flexbox) ============ -->
+<header class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-flex">
+      <div class="hero-text">
+        <div class="hero-eyebrow">Gestión Académica</div>
+        <h1></h1>
+        <p class="lead">
+          Confía en esfuerzo, estas abriendo puertas que aún no ves.
+        </p>
+        <div class="d-flex flex-column flex-sm-row gap-3">
+          <button class="btn btn-gold btn-lg px-4" type="button">Crear cuenta</button>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-art">
+          <span class="tag">MENSAJE MOTIVACIONAL</span>
+          <img src="img/motivacional.jpg" alt="Ilustración de estudiante con laptop y libros, representando la gestión académica en línea">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ 
+<!-- ============ CATÁLOGO DE CURSOS (CSS Grid) ============ -->
+<section id="cursos" class="py-5">
+  <div class="container py-4">
+    <h2 class="section-title">Cursos ofertados este ciclo</h2>
+    <p class="section-sub">Explora la oferta académica disponible para matrícula y revisa horarios, créditos y docente asignado.</p>
+ 
+    <div class="courses-grid">
+ 
+      <article class="course-card">
+        <span class="course-code">MAT-101</span>
+        <h3>Cálculo en una Variable</h3>
+        <div class="course-meta"><span>4 créditos</span><span>Lun/Mié · 8:00</span></div>
+        <p>Límites, derivadas e Inegrales, y su aplicación a problemas de optimización.</p>
+        <button class="btn btn-outline-ink btn-sm">Ver detalle</button>
+      </article>
+ 
+      <article class="course-card">
+        <span class="course-code">PRG-210</span>
+        <h3>Programación Orientada a Objetos</h3>
+        <div class="course-meta"><span>5 créditos</span><span>Mar/Jue · 10:00</span></div>
+        <p>Clases, herencia, polimorfismo y proyectos con Java.</p>
+        <button class="btn btn-outline-ink btn-sm">Ver detalle</button>
+      </article>
+ 
+      <article class="course-card">
+        <span class="course-code">IDW-215</span>
+        <h3>Introducción al Desarrollo Web</h3>
+        <div class="course-meta"><span>4 créditos</span><span>Lun/Mié · 14:00</span></div>
+        <p>Modelado relacional, SQL y normalización de datos.</p>
+        <button class="btn btn-outline-ink btn-sm">Ver detalle</button>
+      </article>
+ 
+      <article class="course-card">
+        <span class="course-code">LIN-120</span>
+        <h3>Lingüística</h3>
+        <div class="course-meta"><span>4 créditos</span><span>Vie · 8:00</span></div>
+        <p>Estudio de la estructura y función del lenguaje en sus diversas formas.</p>
+        <button class="btn btn-outline-ink btn-sm">Ver detalle</button>
+      </article>
+ 
+      <article class="course-card">
+        <span class="course-code">REN-105</span>
+        <h3>Realidad Nacional</h3>
+        <div class="course-meta"><span>3 créditos</span><span>Mar · 16:00</span></div>
+        <p>Estudio y análisis de los principales retos y desafíos de la actualidad nacional.</p>
+        <button class="btn btn-outline-ink btn-sm">Ver detalle</button>
+      </article>
+ 
+      <article class="course-card">
+        <span class="course-code">ESD-100</span>
+        <h3>Estructuras Discretas II</h3>
+        <div class="course-meta"><span>3 créditos</span><span>Jue · 12:00</span></div>
+        <p>Teoría de grafos, árboles y estructuras de datos .</p>
+        <button class="btn btn-outline-ink btn-sm">Ver detalle</button>
+      </article>
+ 
+    </div>
+  </div>
+</section>
+ 
+<!-- ============ NOTICIAS Y EVENTOS (Bootstrap Components) ============ -->
+<section id="noticias" class="section-alt py-5">
+  <div class="container py-4">
+    <h2 class="section-title">Noticias y eventos</h2>
+    <p class="section-sub mb-4">Mantente al día con los comunicados, plazos y actividades de tu facultad.</p>
+ 
+    <div class="row g-4">
+ 
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card news-card h-100">
+          <div class="card-body d-flex flex-column">
+            <span class="news-date">22 sept.</span>
+            <h5 class="card-title">UnsaFest 2026</h5>
+            <p class="card-text flex-grow-1">Festival organizado para el dia del estudiante, con muchos cantantes invitados.</p>
+            <button type="button" class="btn btn-ink mt-2 align-self-start" data-bs-toggle="modal" data-bs-target="#modalNoticia1">
+              Más información
+            </button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card news-card h-100">
+          <div class="card-body d-flex flex-column">
+            <span class="news-date">2 oct.</span>
+            <h5 class="card-title">Proceso de Admisión 2026</h5>
+            <p class="card-text flex-grow-1">Proceso de inscripción para segundas especialidades.</p>
+            <button type="button" class="btn btn-ink mt-2 align-self-start" data-bs-toggle="modal" data-bs-target="#modalNoticia2">
+              Más información
+            </button>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card news-card h-100">
+          <div class="card-body d-flex flex-column">
+            <span class="news-date">6 oct.</span>
+            <h5 class="card-title">Universiadas Lima 2026</h5>
+            <p class="card-text flex-grow-1">Evento deportivo universitario más importante del Perú.</p>
+            <button type="button" class="btn btn-ink mt-2 align-self-start" data-bs-toggle="modal" data-bs-target="#modalNoticia3">
+              Más información
+            </button>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+ 
+<!-- ============ FOOTER ============ -->
+<footer id="contacto" class="py-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-12 col-md-4">
+        <h5 class="brand text-white">Aula Unsa</h5>
+        <p class="small mt-2">Sistema Web de Gestión Académica para estudiantes, docentes y personal administrativo.</p>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6 class="text-white">Enlaces</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-1"><a href="#cursos">Cursos</a></li>
+          <li class="mb-1"><a href="#noticias">Noticias</a></li>
+          <li class="mb-1"><a href="#">Mesa de ayuda</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6 class="text-white">Contacto</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-1">imageninstitucional@unsa.edu.pe</li>
+          <li class="mb-1"> +51 54 391911</li>
+      </div>
+    </div>
+    <hr class="border-secondary mt-4 mb-3">
+    <p class="small mb-0">© 2026 Aula Unsa.</p>
+  </div>
+</footer>
+ 
+<!-- ============ MODALES ============ -->
+<div class="modal fade" id="modalNoticia1" tabindex="-1" aria-labelledby="modalNoticia1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalNoticia1Label">UnsaFest 2026</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>¡UNSA FEST 2026 ya está aquí!</strong> Prepárate para vivir una tarde llena de música y mucha diversión.
+        <br>Desde Yo Soy: </p>
+        <ul>
+          <li>Mafter Rojas — Olivia Rodrigo</li>
+          <li>Mika Bowie —  Mon Laferte</li>
+          <li>José Rosillo — Tributo a Amén</li>
+          <li>¡Y la presentación especial de <strong>Ángeles de Gala</strong>!</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-ink" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<div class="modal fade" id="modalNoticia2" tabindex="-1" aria-labelledby="modalNoticia2Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalNoticia2Label">Proceso de Admisión 2026</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>Hasta el <strong>2 de Octubre</strong> se realizarán las inscripciones y reinscripciones para 
+        segundas especialidades.</p>
+        <p>Examen de Admision: <strong>11 de Octubre</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-ink" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-ink">Inscribirme</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<div class="modal fade" id="modalNoticia3" tabindex="-1" aria-labelledby="modalNoticia3Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalNoticia3Label">Universiadas Lima 2026</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>Del <strong>6 al 18 de octubre</strong> se realizarán las Universiadas Lima 2026, con 24 competencias deportivas
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-ink" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-ink">Ver requisitos</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
