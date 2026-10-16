@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestor de Tareas Universitarias</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>Gestor de Tareas Universitarias</h1>
+      <p id="resumen" class="resumen" aria-live="polite"></p>
+    </header>
+
+    <section class="panel" aria-labelledby="titulo-form">
+      <h2 id="titulo-form">Nueva tarea</h2>
+
+      <div id="alertas" class="alertas" role="alert" aria-live="assertive"></div>
+
+      <form id="form-tarea" novalidate>
+        <div class="campo">
+          <label for="titulo">Título</label>
+          <input type="text" id="titulo" name="titulo" placeholder="Ej. Informe de laboratorio 3">
+        </div>
+        <div class="campo">
+          <label for="curso">Curso</label>
+          <input type="text" id="curso" name="curso" placeholder="Ej. Física II">
+        </div>
+        <div class="campo">
+          <label for="fechaEntrega">Fecha de entrega</label>
+          <input type="date" id="fechaEntrega" name="fechaEntrega">
+        </div>
+        <button type="submit" class="btn btn--primario">Agregar tarea</button>
+      </form>
+    </section>
+
+    <section class="panel" aria-labelledby="titulo-lista">
+      <div class="lista-cabecera">
+        <h2 id="titulo-lista">Mis tareas</h2>
+        <div class="filtros" role="group" aria-label="Filtrar tareas">
+          <button type="button" class="filtro activo" data-filtro="todas">Todas</button>
+          <button type="button" class="filtro" data-filtro="pendientes">Pendientes</button>
+          <button type="button" class="filtro" data-filtro="completadas">Completadas</button>
+        </div>
+      </div>
+
+      <ul id="lista-tareas" class="lista"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
